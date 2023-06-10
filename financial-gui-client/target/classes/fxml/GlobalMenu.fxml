@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+
+<MenuButton mnemonicParsing="false" text="MenuButton" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citytech.gui.service.shared.MainController">
+  <items>
+    <MenuItem mnemonicParsing="false" onAction="#onSceneChange" text="_13fManagerPieChartView" userData="1" />
+    <MenuItem mnemonicParsing="false" onAction="#onSceneChange" text="A-MarginalTaxView" userData="2"/>
+    <MenuItem mnemonicParsing="false" onAction="#onSceneChange" text="B-MarginalTaxView" userData="3"/>
+    <MenuItem mnemonicParsing="false" onAction="#onSceneChange" text="C-MarginalTaxView" userData="4"/>
+  </items>
+</MenuButton>

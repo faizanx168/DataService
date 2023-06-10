@@ -1,0 +1,2 @@
+--module-path C:\developer\___Fall2022\CST3613\javafx-sdk-19\lib --add-modules javafx.controls,javafx.fxml
+https://www.baeldung.com/java-junit-hamcrest-guide

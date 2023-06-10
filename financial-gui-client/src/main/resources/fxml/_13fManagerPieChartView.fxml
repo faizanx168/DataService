@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="897.0" stylesheets="@../css/format.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citytech.gui.service._13FManagers._13FManagersPieChartController">
+   <children>
+       <fx:include layoutX="10" layoutY="10" source="GlobalMenu.fxml"/>
+      <PieChart fx:id="pieChart" layoutX="278.0" layoutY="77.0" prefHeight="366.0" prefWidth="602.0" />
+      <TableView fx:id="tvReport" layoutX="304.0" layoutY="467.0" prefHeight="222.0" prefWidth="526.0">
+        <columns>
+          <TableColumn prefWidth="59.20001220703125" text="row id">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="id" />
+                  </cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="71.20001220703125" text="stock">
+              <cellValueFactory>
+                  <PropertyValueFactory property="stock" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="177.5999755859375" text="manager">
+                <cellValueFactory>
+                    <PropertyValueFactory property="manager" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="99.2000732421875" text="report date">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fDate" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="119.20001220703125" styleClass="money" text="value">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fValuesInBillions" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="124.0" styleClass="money" text="shares">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fShareInBillions" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Slider fx:id="slLimit" layoutX="237.0" layoutY="77.0" majorTickUnit="10.0" orientation="VERTICAL" prefHeight="593.0" prefWidth="14.0" showTickLabels="true" showTickMarks="true" value="10.0" />
+      <Label fx:id="lblTitle" layoutX="278.0" layoutY="25.0" styleClass="title" text="For AAPL stock in billions: 215.69" />
+      <Label layoutX="63.0" layoutY="54.0" text="Stock Symbol Search" />
+      <TextField fx:id="txtStockInput" layoutX="63.0" layoutY="103.0" text="AAPL" />
+      <Label layoutX="63.0" layoutY="164.0" text="Limit" />
+      <TextField fx:id="txtLimit" layoutX="63.0" layoutY="211.0" text="10" />
+      <Button fx:id="btnSearch" layoutX="63.0" layoutY="273.0" mnemonicParsing="false" onAction="#onSearch" text="Search" />
+      <RadioButton layoutX="76.0" layoutY="345.0" mnemonicParsing="false" selected="true" text="Show ID" userData="id">
+         <toggleGroup>
+            <ToggleGroup fx:id="tgDisplayGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="76.0" layoutY="376.0" mnemonicParsing="false" text="Show Company" toggleGroup="$tgDisplayGroup" userData="name" />
+      <Label layoutX="635.0" layoutY="449.0" text="Value and shares in billion by Abbasi" />
+   </children>
+</AnchorPane>

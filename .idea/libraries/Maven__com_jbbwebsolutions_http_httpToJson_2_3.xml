@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.jbbwebsolutions.http:httpToJson:2.3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jbbwebsolutions/http/httpToJson/2.3/httpToJson-2.3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jbbwebsolutions/http/httpToJson/2.3/httpToJson-2.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jbbwebsolutions/http/httpToJson/2.3/httpToJson-2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

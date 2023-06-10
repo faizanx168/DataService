@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="897.0" prefWidth="700.0" stylesheets="@../css/marginalTax.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+       <fx:include layoutX="10" layoutY="10" source="GlobalMenu.fxml"/>
+
+     <AnchorPane fx:id="booboo" layoutX="77.0" layoutY="107.0" prefHeight="34.0" prefWidth="550.0">
+         <children>
+          <RadioButton fx:id="rbSingle" layoutX="121.0" layoutY="7.0" mnemonicParsing="false" text="(S) Single" />      
+          <RadioButton fx:id="rbMarried" layoutX="194.0" layoutY="7.0" mnemonicParsing="false" text="(M)Married" />
+          <RadioButton fx:id="rbMarriedFilingJointly" layoutX="438.0" layoutY="7.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="169.0" text="(MFJ) Married Filing Jointly" />
+            <RadioButton fx:id="rbHeadOfHouseHold" layoutX="278.0" layoutY="7.0" mnemonicParsing="false" text="(HH)Head of House Hold" />
+            <TextField fx:id="tfSalary" layoutY="4.0" prefHeight="25.0" prefWidth="116.0" promptText="salary" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="260.0" layoutY="29.0" text="Marginal Tax Rate for Year 2022" />
+      <Button layoutX="318.0" layoutY="646.0" mnemonicParsing="false" text="calculate" />
+      <Label fx:id="lblURL" layoutX="96.0" layoutY="688.0" prefHeight="17.0" prefWidth="550.0" text="URL: http://localhost:9814/marginalTax/taxPaid?code=S&amp;salary=150000&amp;year=2021" />
+
+            
+           
+      <AnchorPane fx:id="apTaxYear" layoutX="72.0" layoutY="145.0" prefHeight="34.0" prefWidth="550.0" visible="true">
+         <children>
+            <RadioButton layoutX="126.0" layoutY="7.0" mnemonicParsing="false" text="2023" />
+            <RadioButton layoutX="199.0" layoutY="7.0" mnemonicParsing="false" text="2022" />
+            <RadioButton layoutX="272.0" layoutY="7.0" mnemonicParsing="false" text="2021" />
+            <TextField fx:id="tfYear" layoutX="4.0" layoutY="4.0" prefHeight="25.0" prefWidth="116.0" promptText="year" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="25.0" layoutY="102.0" prefHeight="72.0" prefWidth="28.0" text="C">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <Text layoutX="73.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The entire tax liability for this individual would be 29,835.50." wrappingWidth="623.0" />
+      <ImageView fitHeight="365.0" fitWidth="542.0" layoutX="75.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/tax.png" />
+         </image>
+      </ImageView>
+     
+      
+   </children>
+</AnchorPane>
